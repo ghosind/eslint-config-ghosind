@@ -1,0 +1,7 @@
+{
+  "extends": "./index.js",
+  "plugins": [
+      "@typescript-eslint"
+  ],
+  "rules": {}
+}

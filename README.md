@@ -6,7 +6,7 @@
 
 A simple ESLint configuration based on [esling-config-airbnb](https://github.com/airbnb/javascript).
 
-## Getting Start
+## Usage
 
 1. Install `eslint`, `eslint-config-ghosind`, and `eslint-config-airbnb-base` as development dependencies.
 
@@ -26,6 +26,12 @@ npx eslint --init
 npm install --save-dev eslint-plugin-import
 ```
 
+- `eslint-config-ghosind` added Typescript support in rules, and these rules require package `typescript-eslint`. So, you need to install `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser` packages as development dependencies even if you're not using Typescript in your project.
+
+```bash
+npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
 3. Put `eslint-config-ghosind` into `extends` field of `eslintrc` file.
 
 ```json
@@ -38,15 +44,9 @@ npm install --save-dev eslint-plugin-import
 
 ## TypeScript supports
 
-For Typescript users, please execute the following steps after above instructions.
+For Typescript users, please add the following settings into configuration file after above instructions.
 
-1. Please make sure you're installed `@typescript-eslint/eslint-plugin`, and `@typescript-eslint/parser` packages as development dependencies.
-
-```bash
-npm install --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
-```
-
-2. After install dependencies, please put the following settings into `eslintrc` file.
+After install dependencies, please put the following settings into `eslintrc` file.
 
 ```json
 {
